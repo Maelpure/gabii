@@ -1,0 +1,270 @@
+#84
+numeros = [1, 3, 6, 9 ,11]
+maior = 0
+for numero in numeros:
+    if numero > maior:
+        maior = numero
+print ("O maior numero é:",maior)
+
+#85
+numeros = [1, 3, 6, 9 ,11]
+menor = numeros[0]
+for numero in numeros:
+    if numero < menor:
+        menor = numero
+print ("O menor numero é:",menor)
+
+#86
+notas = []
+soma = 0
+for i in range (5):
+    nota= int(input("Digite sua nota: "))
+    notas.append(nota)
+    soma = nota + soma
+    final = soma / 5
+print ("A media das suas notas é", final)
+
+#87
+numeros= [1,2,3,4,5,6]
+pares = []
+for numero in numeros:
+    if numero % 2 == 0:
+        pares.append(numero)
+print(pares)
+
+
+#88
+nomes = ["Ana", "Luna", "Carla","Bruna", "Raissa"]
+nome = input("Digite um nome: ")
+if nome in nomes:
+    nomes.remove(nome)
+    print(nomes)
+else:
+    print("Não encontrado")
+        
+
+#89
+produtos = []
+
+for i in range (5):
+    prod= input("Digite um produto: ")
+    produtos.append(prod)
+
+novo= input("Digite o produto que vc deseja buscar: ")
+
+if novo in produtos:
+        print("Ele ja esta cadastrado")     
+else:
+        print("Não esta cadastrado")   
+
+
+#90
+numeros= []
+for i in range (6):
+    numero= int(input("Digite um numero: "))
+    numeros.append(numero)
+numeros.sort()
+print (numeros)
+numeros.sort(reverse=True)
+print(numeros)
+
+
+#91
+numeros = set()
+for i in range (10):
+    numero= int(input("Digite um numero: "))
+
+    numeros.add(numero)
+print(numeros)
+
+#92
+conjunto1 = {1,2,3,4,5}
+conjunto2 = {2,3,6,7,8}
+print (conjunto1 & conjunto2)
+
+
+#93
+coordenada = (20,30)
+x = coordenada [0]
+y = coordenada [1]
+
+print (x)
+print (y)
+
+#94
+pessoa = {
+    "nome" : "Gabi",
+    "idade" : 16,
+    "cidade" : "Uberlandia"
+}
+
+print (pessoa ["nome"],"tem",pessoa["idade"],"e mora em",pessoa["cidade"])
+
+#95
+nome = input("Digite o nome do aluno: ")
+nota1 = float(input("Digite a primeira nota: "))
+nota2 = float(input("Digite a segunda nota: "))
+
+aluno = {
+    "nome": nome,
+    "nota1": nota1,
+    "nota2": nota2
+}
+
+aluno["media"] = (nota1 + nota2) / 2
+
+print(aluno)
+
+#96
+produtos = [
+    {"nome": "Arroz", "preco": 25},
+    {"nome": "Feijão", "preco": 8},
+    {"nome": "Leite", "preco": 5}
+]
+for produto in produtos:
+    print(produto)
+
+#97
+produtos = [
+    {"nome": "Arroz", "preco": 25},
+    {"nome": "Feijao", "preco": 8},
+    {"nome": "Leite", "preco": 5}
+]
+
+maior = produtos[0]
+
+for produto in produtos:
+    if produto["preco"] > maior["preco"]:
+        maior = produto
+
+print(maior)
+
+#98
+agenda = {
+    "Ana": "99999-6767",
+    "Joao": "99679-6767",
+    "Maria": "67999-6767"
+}
+
+nome = input("Digite o nome: ")
+
+if nome in agenda:
+    print("Telefone:", agenda[nome])
+else:
+    print("Pessoa nao encontrada")
+
+#99
+frase = input("Digite uma frase: ")
+palavras = frase.split()
+contagem = {}
+
+for palavra in palavras:
+    if palavra in contagem:
+        contagem[palavra] = contagem[palavra] + 1
+    else:
+        contagem[palavra] = 1
+
+print(contagem)
+estoque = {
+    "Arroz": 10,
+    "Feijao": 5,
+    "Leite": 8
+}
+
+#100
+produto = input("Digite o produto: ")
+quantidade = int(input("Quantidade para retirar: "))
+
+if produto in estoque:
+    if quantidade <= estoque[produto]:
+        estoque[produto] = estoque[produto] - quantidade
+        print("Retirada feita!")
+    else:
+        print("Estoque insuficiente")
+else:
+    print("Produto nao encontrado")
+
+print(estoque)
+
+
+
+#101
+def saudacao ():
+    print ("Bem vindo ao programa!")
+saudacao()
+
+#102
+def nomes (nome):
+    print(nome)
+nomes("gabi")
+
+#103
+def numeros (x,y):
+    print(x + y)
+numeros(3,5)
+
+#104
+def numeros (x,y):
+    if x > y:
+        return x
+    elif y > x:
+        return y
+    elif y == x:
+        return (numeros)
+
+print (numeros(4,9))
+
+#105
+def verificarPar(numero):
+    if numero % 2 == 0:
+        return True
+    else:
+        return False
+
+if verificarPar(10):
+    print("Número par")
+
+#106
+def notas (x,y,z):
+    print ("A media é",((x+y+z)/3))
+notas(3,7,9)
+
+#107
+def area (x,y):
+    print ("A area do retangulo é",(x * y))
+area (4,7)
+
+#108
+def temp (x):
+    resultado = x * 1,8 + 32
+    print("A temperatura transformada são",resultado,"fahrenheit")
+temp(int(input("Digite uma temperatura:")))
+
+#109
+def fatorial(numero):
+    resultado = 1
+    for i in range(1, numero + 1):
+        resultado = resultado * i
+    return resultado
+
+numero = int(input("Digite um número: "))
+print(fatorial(numero))
+
+#110
+def primo(numero):
+    if numero < 2:
+        return False
+    for i in range(2, numero):
+        if numero % i == 0:
+            return False
+
+    return True
+
+print(primo(int(input("Digite um numero: "))))
+'''
+#111
+
+def vogais ():
+    print(palavra.upper())
+palavra = input("Digite um nome:")
+print(palavra.count("A","E"))
